@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: white;
+  font-family: univers, Arial, sans-serif;
+  overflow: auto;
+}
+header {
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.nameTholen {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5vw;
+  height: 50%;
+  background: linear-gradient(45deg, red, black);
+  background: rotate(45deg);
+  position: relative;
+}
+#newsha {
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  color: rgb(180,180,180);
+  font-size: 0.8vmax;
+}
+#newsha:link, #nesha:visited {
+  text-decoration: none;
+}
+.newS {
+  font-weight: 800;
+  letter-spacing: 0.3vmax;
+}
+#eldin {
+  position: fixed;
+  bottom: 10%;
+  right: 7vw;
+  font-size: 1vmax;
+  color: rgba(180,180,180);
+  border: 2px solid rgb(180,180,180);
+  padding: 0.3vmax 0.5vmax;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#eldin::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(90deg, rgba(0,0,0,0), rgba(180,180,180, 0.5));
+  border-radius: 4px;
+  animation-name: clickme;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#eldin:link, #eldin:visited {
+  text-decoration: none;
+}
+@keyframes clickme {
+  0% {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(180,180,180, 0.5));
+  }
+  85% {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(180,180,180, 0.5));
+  }
+  93% {
+    left: -50%;
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(250,250,250, 1));
+  }
+  100% {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(180,180,180, 0.5));
+  }
+}
+.nameTholen h2 {
+  font-size: 2.5vmax;
+  margin-left: 1vmax;
+}
+.spacing {
+  font-weight: 1000;
+}
+.textBold {
+  color: darkred;
+}
+nav {
+  width: 100%;
+  height: 50%;
+  border-bottom: 3px solid red;
+  background: white;
+}
+ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  border-top: 1px solid black;
+  padding-top: 0.5vw;
+  position: relative;
+  display: inline-block;
+}
+.linkText {
+  position: relative;
+  z-index: 3;
+}
+ul li a:link, ul li a:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1vmax;
+}
+ul li a:hover {
+  color: red;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: calc(100% + 1px);
+  width: 100%; background: white;
+  transition: 0.3s;
+}
+ul li:hover::before {
+  width: 0;
+  left: 50%;
+}
+figure {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3vmax;
+}
+figcaption {
+  font-size: 0.8vmax;
+  color: gray;
+}
+.querBild {
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+  padding: 2vmax 1vmax;
+  width: 65vw;
+  margin: 17vh 7vw 3vw 10vw;
+/*  margin: 17vh auto 3vw auto;*/
+}
+.wrapper p {
+  font: 1.5vmax/1.3 Univers, Arial, sans-serif;
+  margin-bottom: 2vmax;
+}
+.wrapper h3 {
+  margin-bottom: 1vmax;
+  text-align: center;
+  font-size: 1.5vmax;
+}
+.wrapper hr {
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 4vmax;
+  border: 1px solid red;
+}
+.kontakte {
+  position: fixed;
+  right: 7vw;
+  bottom: 20vh;
+  border-left: 2px solid red;
+  display: flex;
+  justify-content: flex-end;
+}
+.doubleRand {
+  height: 100%;
+  width: 99%;
+  border-left: 2px dotted red;
+  align-items: center;
+  padding-left: 1vmax;
+  font-size: clamp(0.3em, 1vmax, 1.5em);
+}
+.doubleRand h4 {
+  margin-bottom: 1vmax
+  font-size: 1vmax;
+}
+.doubleRand p a:link, .doubleRand p a:visited {
+  color: black;
+}
+.socialM {
+  width: clamp(30px, 3vw, 70px);
+}
+.bildMitText {
+  width: 100%;
+  display: flex;
+}
+.bildHalter {
+  width: 30%;
+}
+.bildHalter img {
+  width: 100%;
+  height: 100%;
+}
+.texthalter {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 2vmax;
+}
+.texthalter h2 {
+  margin-bottom: 1vmax;
+  margin-top: 1vmax;
+  font-size: 1.5vmax;
+}
+.texthalter p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.team {
+  display: flex;
+  width: 100%;
+  margin: 1vmax 1vmax 1vmax 0;
+}
+.profilbildContainer {
+  width: 30%;
+  height: auto;
+}
+.teamText {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1vmax;
+  padding-right: 1vmax;
+
+}
+.teamText h2 {
+  font-size: 2vmax;
+  margin-top: auto;
+  margin-bottom: 1vmax;
+}
+.teamText p {
+  margin-bottom: auto;
+}
+.teambild {
+  width: 100%;
+}
+.bildRechts {
+  flex-direction: row-reverse;
+}
+.oeZeiten {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+.mo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  text-align: center;
+  border-right: 1px solid red;
+}
+.di {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  text-align: center;
+  border-right: 1px solid red;
+}
+.mi {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  text-align: center;
+  border-right: 1px solid red;
+}
+.do {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  text-align: center;
+  border-right: 1px solid red;
+}
+.fr {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  text-align: center;
+  border-right: 1px solid red;
+}
+.sa {
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
+  text-align: center;
+  border-right: 1px solid red;
+}
+.moZ {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+}
+.diZ {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+}
+.miZ {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  text-align: center;
+}
+.doZ {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  text-align: center;
+}
+.frZ {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  text-align: center;
+}
+.saZ {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+  text-align: center;
+}
+.mobileIcons {
+  display: none;
+}
+.mobileMenue, .mobileNav {
+  display: none;
+}
+.container {
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5vmax;
+}
+.buttons {
+  width: 5%;
+  height: 15%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 45%;
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+}
+.right {
+  right: 0;
+}
+.left {
+  left: 0;
+
+}
+.pfeil1 {
+  transform: rotate(-45deg);
+}
+.pfeil2 {
+  transform: rotate(135deg);
+}
+.buttons:hover {
+  background: rgba(0,0,0,0.8);
+  cursor: pointer;
+}
